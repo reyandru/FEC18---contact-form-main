@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Contact form</title>
+
+</head>
+<body>
+
+  <div class="confirm-message" id="confirmMsg">
+    <h3><img src="assets/images/icon-success-check.svg" alt=""> Message Sent!</h3>
+    <p>Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
+
+
+  <div class="container">
+    <div class="title-container">
+      <h1>Contact Us</h1>
+    </div>
+    <div class="form-container">
+        <div class="fullnameContainer">
+          <div class="fn1">
+            <label for="fname"> First name</label>
+            <input type="text" id="fname" required>
+            <div class="errorMsg"  id="ErrMsgFn"></div>
+          </div>
+
+          <div class="fn2">
+            <label for="lname"> Last name</label>
+            <input type="text" id="lname" required>
+            <div class="errorMsg"  id="ErrMsgLn"></div>
+          </div>
+        </div>
+        
+        <div class="emailAddressContainer">
+          <label for="email"> Email Address</label>
+          <input type="text" id="email" required>
+          <div class="errorMsg"  id="ErrMsgEmail"></div>
+        </div>
+
+        <div class="queryTypesContainer">
+            <label for=""> Query Type</label>
+          <div class="qtContainer">
+            <div class="qt1">
+              <label for="generalE" class="qtLabel">
+                  <input type="radio" id="generalE" name="qt" required>
+            General Enquiry</label>
+            </div>
+
+            <div class="qt2">
+              <label for="supportR" class="qtLabel">
+                <input type="radio" id="supportR" name="qt" required>
+              Support Request</label>
+            </div>
+          </div>
+          <div class="errorMsg"  id="ErrMsgQry"></div>
+        </div>
+        
+
+        <div class="messageCotainer">
+          <label for="">Message</label>
+          <textarea name="message" id="messageArea">
+    
+          </textarea>
+          <div class="errorMsg" id="ErrMsgMessage"></div>
+        </div>
+
+        <div class="submitBtnContainer">
+          <label for="consentBox" class="consent"><input type="checkbox" name="consentBox" id="consentCheck">I consent to being contacted by the team</label>
+          <div class="errorMsg" id="ErrMsgConsent"></div>
+
+          <button class="submitBtn" id=btnSubmit>Submit</button>
+       </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
